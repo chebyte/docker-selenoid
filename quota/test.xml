@@ -2,12 +2,12 @@
     <browser name="chrome" defaultVersion="74.0">
         <version number="74.0">
             <region name="cluster">
-                <host name="localhost" port="4444" count="4"></host>
+                <host name="selenoid.neuroticket.com" port="4444" count="4"></host>
             </region>
         </version>
         <version number="73.0">
             <region name="cluster">
-                <host name="localhost" port="4444" count="4"></host>
+                <host name="selenoid.neuroticket.com" port="4444" count="4"></host>
             </region>
         </version>
     </browser>

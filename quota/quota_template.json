@@ -2,7 +2,7 @@
   "hosts": {
   "group": {
   "cluster": {
-    "localhost": {
+    "selenoid.neuroticket.com": {
       "port": 4444,
       "count": 4
     } } }
