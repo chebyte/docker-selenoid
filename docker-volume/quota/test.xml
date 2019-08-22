@@ -1,0 +1,14 @@
+<qa:browsers xmlns:qa="urn:config.gridrouter.qatools.ru">
+    <browser name="chrome" defaultVersion="74.0">
+        <version number="74.0">
+            <region name="cluster">
+                <host name="localhost" port="4444" count="1"></host>
+            </region>
+        </version>
+        <version number="73.0">
+            <region name="cluster">
+                <host name="localhost" port="4444" count="1"></host>
+            </region>
+        </version>
+    </browser>
+</qa:browsers>
