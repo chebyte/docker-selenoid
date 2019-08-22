@@ -38,12 +38,7 @@ services:
       - "./etc:/etc/selenoid"
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./video:/opt/selenoid/video"
-    environment:
-      - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video
-    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
+    command: ["-conf", "/etc/selenoid/browsers.json"]
     ports:
       - "4444:4444"
-  videorecorder:
-    image: selenoid/video-recorder
-    logging:
-      driver: none
+  
