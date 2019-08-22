@@ -43,10 +43,6 @@ services:
     command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
     ports:
       - "4444:4444"
-  chrome67:
-    image: selenoid/chrome:74.0
-  chrome68:
-    image: selenoid/chrome:73.0
   videorecorder:
     image: selenoid/video-recorder
     logging:
