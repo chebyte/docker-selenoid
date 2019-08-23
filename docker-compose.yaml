@@ -19,13 +19,13 @@ services:
       - "./:/etc/grid-router:ro"
   selenoid-ui:
     restart: always
-    image: aerokube/selenoid-ui
+    image: aerokube/selenoid-ui:1.8.1
     links:
       - ggr-ui
     ports:
       - "8080:8080"
     command: ["--selenoid-uri", "http://ggr-ui:8888"]
-  selenoid:
+    selenoid:
     network_mode: bridge
     image: aerokube/selenoid:latest-release
     volumes:
