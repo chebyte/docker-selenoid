@@ -2,7 +2,7 @@ version: '3'
 services:
   ggr:
     restart: always
-    image: aerokube/ggr:latest
+    image: aerokube/ggr
     links:
       - ggr-ui
     ports:
@@ -12,14 +12,14 @@ services:
     command: ["-quotaDir", "/etc/grid-router/quota", "-listen", ":4446"]
   ggr-ui:
     restart: always
-    image: aerokube/ggr-ui:lastest
+    image: aerokube/ggr-ui
     ports:
       - "8888:8888"
     volumes:
       - "./:/etc/grid-router:ro"
   selenoid-ui:
     restart: always
-    image: aerokube/selenoid-ui:latest
+    image: aerokube/selenoid-ui
     links:
       - ggr-ui
     ports:
@@ -33,7 +33,7 @@ services:
     command: ["java", "-jar", "/selenium-server-standalone-2.44.0.jar", "-port", "4445"]
   selenoid:
     network_mode: bridge
-    image: aerokube/selenoid:latest
+    image: aerokube/selenoid:latest-release
     volumes:
       - "./etc:/etc/selenoid"
       - "/var/run/docker.sock:/var/run/docker.sock"
