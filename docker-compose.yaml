@@ -25,12 +25,6 @@ services:
     ports:
       - "8080:8080"
     command: ["--selenoid-uri", "http://ggr-ui:8888"]
-  selenium-server-standalone:
-    restart: always
-    image: antonpatsev/selenium-server-standalone:2.44
-    ports:
-      - "4445:4445"
-    command: ["java", "-jar", "/selenium-server-standalone-2.44.0.jar", "-port", "4445"]
   selenoid:
     network_mode: bridge
     image: aerokube/selenoid:latest-release
